@@ -29,6 +29,13 @@ body{
     justify-content: center;
     gap: 18px;
     transition: opacity 0.6s ease, visibility 0.6s ease;
+   animation: autoDismissPreloader 0.01s linear 4.5s forwards;
+}
+@keyframes autoDismissPreloader{
+    0%{ opacity: 1; visibility: visible; }
+    99.99%{ opacity: 1; visibility: visible; }
+    100%{ opacity: 0; visibility: hidden; }
+    pointer-events: none;
 }
 .preloader.hide{
     opacity: 0;
