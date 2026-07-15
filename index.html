@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Rich | Artisan Coffee</title>
+    <meta name="description" content="Roast & Rich — small-batch, ethically sourced artisan coffee. From bean to cup, crafted with passion.">
+
+    <!-- Social preview -->
+    <meta property="og:title" content="Roast & Rich | Artisan Coffee">
+    <meta property="og:description" content="Small-batch, ethically sourced artisan coffee — every sip tells a story.">
+    <meta property="og:image" content="assets/about.png">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap">
+</head>
+<body>
+
+    <!-- Preloader: coffee cup fills & spills, then reveals the site -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <svg class="preloader-cup" viewBox="0 0 120 140" width="90" height="105">
+            <ellipse class="cup-steam-path" cx="60" cy="18" rx="3" ry="10"/>
+            <path class="cup-handle" d="M100 55 Q125 55 125 78 Q125 101 100 101" fill="none" stroke="#c87941" stroke-width="6"/>
+            <path d="M20 45 H100 L92 120 Q90 132 78 132 H42 Q30 132 28 120 Z" fill="none" stroke="beige" stroke-width="4"/>
+            <clipPath id="cupClip">
+                <path d="M22 47 H98 L91 119 Q89 130 78 130 H42 Q31 130 29 119 Z"/>
+            </clipPath>
+            <rect class="cup-fill" x="20" y="130" width="80" height="0" fill="#c87941" clip-path="url(#cupClip)"/>
+        </svg>
+        <p class="preloader-label">brewing your experience…</p>
+    </div>
+
+    <!-- floating bean particles (decorative, injected/animated via CSS) -->
+    <div class="bean-field" aria-hidden="true">
+        <span class="bean bean-1"></span>
+        <span class="bean bean-2"></span>
+        <span class="bean bean-3"></span>
+        <span class="bean bean-4"></span>
+        <span class="bean bean-5"></span>
+        <span class="bean bean-6"></span>
+    </div>
+
+   <header>
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <img src="logo.png" alt="Roast & Rich logo">
+                <div>
+                    <h1>Roast&Rich</h1>
+                    <h2>artisan coffee</h2>
+                </div>
+            </li>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <li class="nav-links" id="navLinks">
+                <a href="#hero">Hero</a>
+                <a href="#about">About us</a>
+                <a href="#products">Products</a>
+                <a href="#Experiences">Experiences</a>
+                <a href="#contact">Contact</a>
+            </li>
+            <li><button class="order-btn js-toast" data-toast="Order started — let's brew! ☕">Order Now</button></li>
+        </ul>
+    </nav>
+   </header>
+
+   <main>
+    <div id="hero">
+        <div class="hero-content">
+            <span class="hero-label">Artisan Coffee, Perfectly Roasted</span>
+            <h1 class="hero-title">
+                "Every Sip Tells a Story"<br>
+                "Brewed with Passion, Served with Love"
+            </h1>
+            <p class="hero-sub"><b>Handcrafted artisan coffee roasted in small batches to deliver rich flavors, unforgettable aromas, and moments worth savoring.</b></p>
+            <div class="CTA">
+                <button class="order js-toast" data-toast="Order started — let's brew! ☕">Order Your Coffee</button>
+                <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="things reveal">
+        <div class="thing">
+            <img src="leaf.gif" alt="leaf logo" class="icon">
+            <div>
+                <h1>Ethically Sourced</h1>
+                <p>Beans sourced directly from trusted farms worldwide.</p>
+            </div>
+        </div>
+
+        <div class="thing">
+            <img src="fire.gif" alt="fire logo" class="icon">
+            <div>
+                <h1>Small-Batch Roasted</h1>
+                <p>Roasted in small batches to ensure freshness and flavor.</p>
+            </div>
+        </div>
+
+        <div class="thing">
+            <img src="star.gif" alt="star logo" class="icon">
+            <div>
+                <h1>Premium Quality</h1>
+                <p>Only top-grade beans for an exceptional cup.</p>
+            </div>
+        </div>
+
+        <div class="thing">
+            <img src="truck.gif" alt="truck logo" class="icon">
+            <div>
+                <h1>Fresh Delivery</h1>
+                <p>Roasted-to-order and delivered fast to your doorstep.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="about-section reveal">
+            <div class="about-image">
+                <!-- Cold coffee spilling/pouring animation, replaces the static photo -->
+                 <img src="about.png" alt="Cold coffee pouring into a glass over ice" class="static-about-img">
+            
+            </div>
+            <div class="story">
+                <h1 class="about-content">OUR STORY</h1>
+                <h2>From Passion to Perfection</h2>
+                <p>Roast & Rich began in 2018 when two lifelong coffee enthusiasts traveled through coffee-growing regions searching for the perfect cup.</p>
+                <p>What started as weekend experiments with hand-roasted beans soon became a mission: to bring exceptional artisan coffee to people who appreciate quality, craftsmanship, and authenticity.</p>
+                <p>Today, Roast & Rich partners directly with ethical coffee farmers and carefully roasts every batch to highlight the unique character of each bean. We believe coffee is more than a drink — it's a ritual, a conversation, and a moment of connection.</p>
+                <br>
+                <button class="more">Learn More</button>
+                <br>
+            </div>
+
+            <div class="history">
+                <h1 class="about-content">Brand History</h1>
+                <h2>A Journey Through Flavour</h2>
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <span class="timeline-year">2018</span>
+                        <p>The founder began roasting coffee in a small garage using a handcrafted roasting drum.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-year">2019</span>
+                        <p>Partnered with sustainable farms in Colombia and Ethiopia.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-year">2021</span>
+                        <p>Opened the first Roast & Rich tasting studio.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-year">2023</span>
+                        <p>Reached over 50,000 happy customers nationwide!</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-year">Today</span>
+                        <p>Continuing our mission of delivering extraordinary coffee experiences while supporting ethical farming communities.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="about-section2 reveal">
+            <div class="mission">
+                <h1 class="about-content">Our Mission</h1>
+                <p>"To transform everyday coffee moments into meaningful experiences through ethically sourced beans, artisan roasting, and uncompromising quality."</p>
+            </div>
+
+            <div class="vision">
+                <h1 class="about-content">Brand Vision</h1>
+                <p>"To become the most trusted artisan coffee brand, connecting people through exceptional coffee and sustainable practices."</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="products">
+        <h1 class="about-content">Featured Coffees</h1>
+        <h2 style="text-align: center; color: beige;">Crafted for True Coffee Lovers</h2>
+
+        <div class="product reveal">
+            <div class="product-content">
+                <img src="p1.png" alt="Mountain Sunrise Blend" class="product-image">
+                <div class="coffee-card">
+                    <h2>Mountain Sunrise Blend</h2>
+                    <p>A bright and balanced coffee with notes of citrus, honey, and caramel.</p>
+                    <p><b>Roast Level: </b><span class="Roast-level">Medium</span></p>
+                    <button class="order-btn js-toast" data-toast="Mountain Sunrise Blend added! ☕">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-content">
+                <img src="p2.png" alt="Midnight Reserve" class="product-image">
+                <div class="coffee-card">
+                    <h2>Midnight Reserve</h2>
+                    <p>Bold and rich with dark chocolate, toasted nuts, and smoky undertones.</p>
+                    <p><b>Roast Level: </b><span class="Roast-level">Dark</span></p>
+                    <button class="order-btn js-toast" data-toast="Midnight Reserve added! ☕">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-content">
+                <img src="p3.png" alt="Golden Valley Estate" class="product-image">
+                <div class="coffee-card">
+                    <h2>Golden Valley Estate</h2>
+                    <p>Smooth and elegant with hints of cocoa, berries, and brown sugar.</p>
+                    <p><b>Roast Level: </b><span class="Roast-level">Medium-Dark</span></p>
+                    <button class="order-btn js-toast" data-toast="Golden Valley Estate added! ☕">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Experiences">
+        <h1 class="about-content">THE ROAST&RICH EXPERIENCE</h1>
+        <h2 style="text-align:center; color:white;">More Than Just Coffee</h2>
+        <div class="Experience-content reveal">
+            <div class="exp">
+                <img src="e1.png" alt="Coffee roasting"><br>
+                <h2>The Art Behind Every Roast</h2>
+                <p>Our master roasters carefully monitor temperature, airflow, and timing to unlock the full potential of every bean. The result is a cup that's balanced, flavorful, and uniquely memorable.</p>
+            </div>
+
+            <div class="exp">
+                <img src="e2.png" alt="Coffee farm"><br>
+                <h2>Sustainability Commitment</h2>
+                <p>We believe exceptional coffee should benefit everyone involved in its journey.</p>
+            </div>
+
+            <div class="exp">
+                <img src="e3.png" alt="Coffee latte art"><br>
+                <h2>Handcrafted With Care</h2>
+                <p>From bean to cup, every step is done with passion, precision, and a commitment to quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="trust-strip reveal">
+        <div class="trust-item">
+            <span class="trust-icon">★★★★★</span>
+            <div>
+                <strong>4.9 / 5</strong>
+                <p>from 2,000+ verified orders</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">🌱</span>
+            <div>
+                <strong>100% Ethically Sourced</strong>
+                <p>direct-trade farm partnerships</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <div>
+                <strong>Free Delivery</strong>
+                <p>on orders above ₹999</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">↩️</span>
+            <div>
+                <strong>Easy Returns</strong>
+                <p>not happy? full refund, no questions</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h1 class="about-content">WHAT OUR CUSTOMERS SAY</h1>
+        <h2 style="text-align: center;">Loved By Thousands of Coffee Drinkers</h2>
+        <div class="box reveal">
+            <div class="tmn">
+                <p>"The smoothest coffee I've ever tasted. Every cup feels like a luxury experience."</p>
+                <div class="review">
+                    <img src="Sarah.jpg" alt="Sarah M.">
+                    <h1>Sarah M.</h1>
+                </div>
+            </div>
+            <div class="tmn">
+                <p>"You can truly taste the difference of small-batch roasting."</p>
+                <div class="review">
+                    <img src="michael.jpg" alt="Michael T.">
+                    <h1>Michael T.</h1>
+                </div>
+            </div>
+            <div class="tmn">
+                <p>"Fresh, aromatic, and beautifully packaged. My new favourite brand."</p>
+                <div class="review">
+                    <img src="Emily.jpg" alt="Emily R.">
+                    <h1>Emily R.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="faq reveal">
+            <span class="section-eyebrow">Support</span>
+            <h1 class="about-content">Frequently Asked Questions</h1>
+            <h2 class="faq-subtitle">Everything you need to know before your first order</h2>
+            <div class="faq-scroll-wrap">
+                <div class="faq-content">
+                    <details class="faq-items" open>
+                        <summary>
+                            <span class="faq-q"><span class="faq-num">01</span>Where do your coffee beans come from?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </summary>
+                        <p>We source our beans from carefully selected farms in renowned coffee-growing regions worldwide.</p>
+                    </details>
+                    <details class="faq-items">
+                        <summary>
+                            <span class="faq-q"><span class="faq-num">02</span>How fresh is your coffee?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </summary>
+                        <p>Every order is roasted shortly before shipping to ensure maximum freshness.</p>
+                    </details>
+                    <details class="faq-items">
+                        <summary>
+                            <span class="faq-q"><span class="faq-num">03</span>Do you offer subscription services?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </summary>
+                        <p>Yes, we offer a convenient subscription service for regular coffee deliveries.</p>
+                    </details>
+                    <details class="faq-items">
+                        <summary>
+                            <span class="faq-q"><span class="faq-num">04</span>Are your products ethically sourced?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </summary>
+                        <p>Absolutely! We are committed to sourcing our coffee beans ethically and sustainably.</p>
+                    </details>
+                </div>
+                <div class="faq-fade" aria-hidden="true"></div>
+            </div>
+        </div>
+
+        <div class="join reveal">
+            <h1 class="about-content">JOIN OUR COFFEE COMMUNITY</h1>
+            <h2>Stay in the Loop</h2>
+            <p>Get exclusive offers, brewing tips, and early access to new coffee releases.</p>
+            <h1>Subscribe to Our Newsletter</h1>
+            <form id="newsletterForm">
+                <input type="text" placeholder="Your Name" required style="background:none; color: beige; padding: 15px; border-radius: 6px; border:2px solid beige;"><br><br>
+                <input type="email" placeholder="Your E-mail" required style="background:none; color: beige; padding: 15px; border-radius: 6px; border: 2px solid beige;"><br><br>
+                <button type="submit" class="subscribe">Subscribe</button><br><br>
+            </form>
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container1">
+            <div class="us">
+                <div class="logo">
+                    <img src="logo.png" alt="Roast & Rich logo">
+                    <div>
+                        <h1>Roast&Rich</h1>
+                        <h2>artisan coffee</h2>
+                    </div>
+                </div>
+                <p>Crafting extraordinary coffee experiences, one bean at a time.</p>
+                <br>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook" style="background-color: antiquewhite; border-radius: 55px;"></a>
+                    <a href="#" aria-label="Instagram"><img src="insta.png" alt="Instagram" style="background-color: antiquewhite; border-radius: 55px;"></a>
+                    <a href="#" aria-label="Twitter / X"><img src="twitter.png" alt="Twitter" style="background-color: antiquewhite; border-radius: 55px;"></a>
+                    <a href="#" aria-label="X"><img src="x-icon.png" alt="X" style="background-color: antiquewhite; border-radius: 55px;"></a>
+                </div>
+            </div>
+
+            <div class="Ql">
+                <h1>Quick Links</h1>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Coffee</a></li>
+                <li><a href="#Experiences">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+
+            <div class="coffee">
+                <h1>Coffee</h1>
+                <li><a href="#products">All coffees</a></li>
+                <li><a href="#contact">Subscriptions</a></li>
+                <li><a href="#">Brewing Guide</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Wholesale</a></li>
+            </div>
+
+            <div class="contact-us">
+                <h1>Contact Us</h1>
+                <div class="items">
+                    <img src="assets/location.png" alt="location" class="icon">
+                    <h1>New Delhi, India</h1>
+                </div>
+                <div class="items">
+                    <img src="mailB.png" alt="mail" class="icon">
+                    <h1>hello@roastandrich.com</h1>
+                </div>
+                <div class="items">
+                    <img src="callB.png" alt="phone" class="icon">
+                    <h1>+91 9876543210</h1>
+                </div>
+            </div>
+
+                <div class="items">
+<svg class="iced-coffee-anim" viewBox="0 0 300 340" role="img" aria-label="Animated illustration of cold coffee pouring into a glass over ice">
+                    <defs>
+                        <linearGradient id="coffeeGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#8a5a34"/>
+                            <stop offset="100%" stop-color="#4a2c14"/>
+                        </linearGradient>
+                        <clipPath id="glassClip">
+                            <path d="M95 120 H205 L192 300 Q190 316 174 316 H126 Q110 316 108 300 Z"/>
+                        </clipPath>
+                    </defs>
+
+                    <!-- pouring stream -->
+                    <rect class="pour-stream" x="146" y="0" width="8" height="90" fill="url(#coffeeGrad)"/>
+                    <circle class="pour-splash s1" cx="150" cy="122" r="4" fill="#6b4423"/>
+                    <circle class="pour-splash s2" cx="140" cy="122" r="3" fill="#6b4423"/>
+                    <circle class="pour-splash s3" cx="160" cy="122" r="3" fill="#6b4423"/>
+
+                    <!-- glass -->
+                    <g clip-path="url(#glassClip)">
+                        <rect class="coffee-level" x="95" y="150" width="110" height="170" fill="url(#coffeeGrad)"/>
+                        <ellipse class="ice-cube ice-1" cx="125" cy="180" rx="16" ry="12" fill="rgba(255,255,255,0.55)"/>
+                        <ellipse class="ice-cube ice-2" cx="165" cy="200" rx="18" ry="13" fill="rgba(255,255,255,0.5)"/>
+                        <ellipse class="ice-cube ice-3" cx="140" cy="230" rx="15" ry="11" fill="rgba(255,255,255,0.5)"/>
+                    </g>
+
+                    <!-- glass outline -->
+                    <path d="M95 120 H205 L192 300 Q190 316 174 316 H126 Q110 316 108 300 Z" fill="none" stroke="beige" stroke-width="4"/>
+                    <ellipse cx="150" cy="120" rx="55" ry="10" fill="none" stroke="beige" stroke-width="4"/>
+                </svg>
+            </div>
+        </div>
+        <p class="footer-note">&copy; <span id="year"></span> Roast & Rich. All rights reserved.</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
