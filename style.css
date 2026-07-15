@@ -29,7 +29,7 @@ body{
     justify-content: center;
     gap: 18px;
     transition: opacity 0.6s ease, visibility 0.6s ease;
-   animation: autoDismissPreloader 0.01s linear 4.5s forwards;
+   animation: autoDismissPreloader 0.02s linear 5s forwards;
 }
 @keyframes autoDismissPreloader{
     0%{ opacity: 1; visibility: visible; }
