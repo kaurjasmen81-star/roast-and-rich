@@ -6,10 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Preloader: hide once the page has finished loading ----
     const preloader = document.getElementById('preloader');
-    const hidePreloader = () => preloader && preloader.classList.add('hide');
-    window.addEventListener('load', () => setTimeout(hidePreloader, 1400));
-    // Safety net in case the load event is delayed by a slow asset
-    setTimeout(hidePreloader, 3500);
+const hidePreloader = () => preloader && preloader.classList.add('hide');
+if (document.readyState === 'complete') {
+    setTimeout(hidePreloader, 600);
+} else {
+    window.addEventListener('load', () => setTimeout(hidePreloader, 600));
+}
+setTimeout(hidePreloader, 3000);
+window.addEventListener('pageshow', hidePreloader);
 
     // ---- Mobile nav toggle ----
     const navToggle = document.getElementById('navToggle');
