@@ -3,7 +3,7 @@
 A single-page, responsive landing page for a fictional artisan coffee brand, built with plain **HTML, CSS, and JavaScript** (no frameworks, no build step).
 
 
-![Roast & Rich preview](about.jpg)
+![Roast & Rich preview](about.png)
 
 ## ✨ Features
 
